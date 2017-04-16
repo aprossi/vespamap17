@@ -3,5 +3,5 @@ Presentations for 2017 VESPA mapping workshop - more on https://epn-vespa.github
 
 Presentations here to include:
 
-* Welcome and introduction (@aprossi & Chiara Marmo)
-* Review of web services and popular tools available to the community (Angelo Pio Rossi and Trent Hare)
+* Welcome and introduction ([Angelo Pio Rossi](https://github.com/aprossi) & [Chiara Marmo](https://github.com/cmarmo))
+* Review of web services and popular tools available to the community ([Angelo Pio Rossi](https://github.com/aprossi) and [Trent Hare](https://github.com/thareUSGS))
