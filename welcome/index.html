@@ -1,0 +1,434 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google IO 2012</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/app.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<!-- <slide class="logoslide nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo.png"></span>
+  </article>
+</slide>
+ -->
+<slide class="title-slide segue nobackground">
+  <aside class="gdbar"><img src="images/vespa_128.png"></aside>
+  <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+  <hgroup class="auto-fadein">
+    <h1 data-config-title><!-- populated from slide_config.json --></h1>
+    <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+    <p data-config-presenter><!-- populated from slide_config.json --></p>
+  </hgroup>
+</slide>
+
+
+<slide class="backdrop" >
+  
+    <hgroup>
+      <h2>Welcome</h2>
+      <h3>Thanks</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>Many thanks to all involved and participating</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Why this workshop</h2>
+      <h3>Background</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul class="build">
+<li>
+<p>Why this workshop (without EU jargon...)</p>
+<ul class="build">
+<li>Science needs with today's data wealth are different from 10 years ago</li>
+<li>GIS/OGC and VO worlds need interoperability across (which is advanced withn each)</li>
+</ul>
+</li>
+<li>
+<p>Why this workshop (with some EU jargon...)</p>
+<ul class="build">
+<li>VESPA (Planetary VO) has its roots (IDIS) in EU FP6 (few years ago..)</li>
+<li>FP7 saw a working prototype of Planetary VO</li>
+<li>H2020 consolidated Planetary VO and expanded its mapping component</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Why this workshop</h2>
+      <h3>Objectives</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul class="build">
+<li>Share and advance on Surface imaging and mapping (human, computer-aided, geologic, geospatial)</li>
+<li>Integrate data through OGC and VO standards: opportunities and challenges</li>
+<li>Disseminate information on available tools and datasets</li>
+<li>Improve VESPA mapping capabilities (search, discovery, etc.)</li>
+<li>Contribute to advance standardisation of mapping for small (irregular) bodies</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>A bit back in time</h2>
+      <h3>A personal retrospective</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>1999: I saw my first planetary data (MGS)<ul>
+<li>Volumes were on CD (700 Mb)</li>
+<li>Only tool was isis2 (python did not exist back then...), only on Sparc/Sun</li>
+<li>GIS was rudimentary (but USGS was already ahead!)</li>
+</ul>
+</li>
+<li>18 years after planetary mapping is much changed<ul>
+<li>Overall size of community larger</li>
+<li>Overall size/complexity of data extremely larger</li>
+</ul>
+</li>
+<li>BigData or not, robust data access/analysis approaches are needed</li>
+<li>A bit like with Unix, VO/OGC are around since a while, evolve and provide (enough?) flexibility</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Background and previous efforts</h2>
+      <h3>Few ~recent workshops around planetary mapping</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul class="build">
+<li>2009: Geological Mapping of Mars (ASI/USGS/IRSPS)</li>
+<li>2013: 1st Planetary Data Workshop (USGS/LPI)</li>
+<li>2015: ESAC Gis Workshop (ESA)</li>
+<li>2015: 2nd Planetary Data Workshop (USGS/LPI)</li>
+<li>2017: Planetary Mapping and Virtual Observatory (EuroPlanet)</li>
+<li>2017: 3rd Planetary Data Workshop (USGS/LPI)</li>
+<li>... ???</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Agenda overview</h2>
+      <h3></h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>Wednesday 19th: state of the art / overview</li>
+<li>Thursday 20th: hands-on / tutorial / hakathon</li>
+<li>Friday 21st: continued hackathon / hands-on and discussion</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Agenda overview</h2>
+      <h3>Daily structure</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>8:30 - day start</li>
+<li>10:30-11:00 - coffee break</li>
+<li>12:30 - 14:00 - lunch break</li>
+<li>15:30 - 16:00 - coffee break</li>
+<li>19:30 - dinner</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Agenda overview</h2>
+      <h3>Wednesday 19 April 2017</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>08:30 – 9:00 – Welcome and introduction</li>
+<li>09:00 – 09:30 – Keynote: VESPA &amp; VO</li>
+<li>09:30 – 09:45 – Discussion</li>
+<li>09:45 – 10:15 – Keynote:  GIS &amp; Mapping state of the art</li>
+<li>10:15 – 10:30 - Discussion</li>
+<li>11:00 – 15:30 Lightning talks 5+3 min (lunch in between)</li>
+<li>16:00 – 17:30 VESPA Tutorial general  + VO Tools</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Agenda overview</h2>
+      <h3>Thursday 20 April 2017</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>08:30 – 09:00 – Review of web services and popular tools available to the community</li>
+<li>09:00 – 09:15 – Discussion</li>
+<li>09:15 – 09:45 – Cartography of minor bodies and related open issues</li>
+<li>09:45 – 10:00 – Discussion</li>
+<li>10:00 – 10:30 –  Description of Hackathon challenges and selection, preparations</li>
+<li>11:00 – 12:30 GIS VESPA tutorial (Qgis + FITS) 45 min combined</li>
+<li>14:00 – 15:30 Hackathon &amp; GDAL + Jupyter tutorial session</li>
+<li>16:00 – 17:30 Hackathon</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Agenda overview</h2>
+      <h3>Friday 21 April 2017</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>08:30 - 10:30 Continued hackathon + discussion on results and next steps</li>
+<li>11:00 – 12:00 – Discussion, OGC standardisation, needs for minor bodies, etc.</li>
+<li>Needs of scientists for efficient planetary GIS-based mapping</li>
+<li>Tools neeeded/missed</li>
+<li>Guidelines for planetary mapping</li>
+<li>12:00 adjourn </li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Post workshop...</h2>
+      <h3>What then?</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>Well, we will see.</li>
+<li>Hopefully outcomes to positively influence<ul>
+<li>VESPA developments</li>
+<li>Standardisation</li>
+<li>Community awareness</li>
+<li>Expansion of user base</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Post workshop...</h2>
+      <h3>Special issue</h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>We are working on a double special issue for 2 workshops:<ul>
+<li>2017: Planetary Mapping and Virtual Observatory (EuroPlanet)</li>
+<li>2017: 3rd Planetary Data Workshop (USGS/LPI)</li>
+</ul>
+</li>
+<li>Possibility of both technical/algorithm and scientific/analysis contribution (on 2 matching journals)</li>
+<li>Please fill the form online (links to be shared later during the workshop) indicating:
+    a) Intention to submit a paper
+    b) tentative title
+    c) classification into more development/tools vs. data analysis/mapping</li>
+<li>For further questions, please get in touch with Angelo, Trent.</li>
+<li>More info to come in the next few weeks</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Logistics</h2>
+      <h3></h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><ul>
+<li>Wi-FI<ul>
+<li>single code at hotel (when it works)</li>
+<li>custom accounts for the workshop (info on your badge)</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Live streaming</h2>
+      <h3></h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><p>Please let us know <strong>NOW</strong> if you have anything against being live-streamed/filmed/recorded...</p>
+<footer class="source"><img src="images/epn.png" height="32"> License to be <a href=" https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4.0</a></footer></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Questions?</h2>
+      <h3></h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><footer class="source"><img src="images/epn.png" height="32"> Content ©2017 <a href="http://aprossi.eu">A. P. Rossi et al.</a> - <a href="https://twitter.com/arosp">@arosp</a> - <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></footer></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <hgroup>
+      <h2>Many thanks!</h2>
+      <h3></h3>
+      <!-- FOOTER ADDED -->
+      <!-- <footer class="source"><a href="http://europlanet-vespa.eu/"><img src="images/epn.png" height="32"></a></footer> -->
+      <footer class="source"><img src="images/epn.png" height="32"></footer>
+      <!-- END FOOTER ADDED -->
+    </hgroup>
+    <article ><p>Let the workshop begin...</p>
+<footer class="source"><img src="images/epn.png" height="32"><a class="twitter-timeline"
+      href="https://twitter.com/#vespamap17"
+      data-tweet-limit="1">
+Tweets on #vespamap17</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</footer>
+
+<hr /></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <aside class="gdbar right"><img src="images/vespa_128.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2>Happy workshop!</h2>
+    <p>Hashtag (and OP Slack channel): #vespamap17</p>
+  </article>
+  <p class="auto-fadein" data-config-contact>
+    <!-- populated from slide_config.json -->
+  </p>
+</slide>
+
+<!-- <slide class="logoslide dark nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo_white.png"></span>
+  </article>
+</slide> -->
+
+<slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
+   <hgroup>
+     <h2 class="white">Full Image (with Optional Header)</h2>
+   </hgroup>
+   <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
+  </slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
